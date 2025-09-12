@@ -905,3 +905,37 @@ img {
         max-height: 300px;
     }
 }
+.service-second-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 40px;
+    background-color: #D3E5F3;
+    padding: 25px;
+    padding-right: 0;
+    border-radius: 7px;
+    margin-bottom: 100px;
+    height: 260px;
+}
+.service-second-block h3 {
+    font-size: 55px;
+    color: #353431;
+    font-family: 'sfuidisplayBold';
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 100%;
+}
+@media(max-width: 1200px) {
+}
+@media(max-width: 768px) {
+    .service-second-block h3 {
+        font-size: 36px;
+    }
+}
+@media(max-width: 576px) {
+    .service-second-block {
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: center;
+    }
+}
