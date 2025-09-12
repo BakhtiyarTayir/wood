@@ -1,0 +1,31 @@
+{
+  "name": "figma-layout",
+  "version": "1.0.0",
+  "description": "Простая структура для верстки по макету из Figma с автоматическим перезапуском",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --open=/index.html --watch=.",
+    "dev": "live-server --port=3000 --open=/index.html --watch=. --no-browser",
+    "install-server": "npm install -g live-server"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "figma",
+    "layout",
+    "live-reload"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
