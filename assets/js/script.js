@@ -83,4 +83,40 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     console.log('JavaScript инициализирован успешно!');
+    
+    // Инициализация Owl Carousel для портфолио
+    const portfolioCarousel = $('.portfolio-grid.owl-carousel').owlCarousel({
+        items: 2,
+        loop: true,
+        margin: 30,
+        nav: false, // Отключаем встроенную навигацию
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            }
+        }
+    });
+    
+    // Подключение кастомной навигации к Owl Carousel
+    const prevBtn = document.querySelector('.arrow-left');
+    const nextBtn = document.querySelector('.arrow-right');
+    
+    if (prevBtn && nextBtn) {
+        // Обработчик для кнопки "Назад"
+        prevBtn.addEventListener('click', function() {
+            portfolioCarousel.trigger('prev.owl.carousel');
+        });
+        
+        // Обработчик для кнопки "Вперед"
+        nextBtn.addEventListener('click', function() {
+            portfolioCarousel.trigger('next.owl.carousel');
+        });
+    }
 });
