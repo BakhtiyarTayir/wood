@@ -32,15 +32,55 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100);
     }
     
-    // Функция для обновления времени (демонстрация динамического контента)
-    function updateTime() {
-        const now = new Date();
-        const timeString = now.toLocaleTimeString('ru-RU');
-        console.log('Текущее время:', timeString);
+
+    
+    // Добавление класса bg-color к header при скролле
+    const header = document.querySelector('.header');
+    if (header) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 0) {
+                header.classList.add('bg-color');
+            } else {
+                header.classList.remove('bg-color');
+            }
+        });
     }
     
-    // Обновляем время каждую секунду
-    setInterval(updateTime, 1000);
+    // Мобильное меню
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const nav = document.querySelector('.nav');
+    
+    if (mobileMenuToggle && nav) {
+        mobileMenuToggle.addEventListener('click', function() {
+            // Переключаем класс active для кнопки (анимация гамбургера)
+            mobileMenuToggle.classList.toggle('active');
+            // Переключаем класс active для навигации (показать/скрыть меню)
+            nav.classList.toggle('active');
+            
+            // Изменяем aria-label для доступности
+            const isOpen = nav.classList.contains('active');
+            mobileMenuToggle.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+        });
+        
+        // Закрытие меню при клике на ссылку навигации
+        const navLinks = document.querySelectorAll('.nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuToggle.classList.remove('active');
+                nav.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-label', 'Открыть меню');
+            });
+        });
+        
+        // Закрытие меню при изменении размера окна (если переходим на десктоп)
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                mobileMenuToggle.classList.remove('active');
+                nav.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-label', 'Открыть меню');
+            }
+        });
+    }
     
     console.log('JavaScript инициализирован успешно!');
 });

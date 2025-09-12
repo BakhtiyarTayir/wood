@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Верстка по макету</title>
+    <title>Архибуз</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header-top">
-                <div class="logo">
+                <div class="header-logo">
                     <span>Архибуз</span>
                 </div>
+
                 <nav class="nav">
                     <ul>
                         <li><a href="#">главная</a></li>
@@ -21,20 +22,41 @@
                         <li><a href="#">услуги</a></li>
                         <li><a href="#">опросный лист</a></li>
                     </ul>
+                    <div class="mobile-contacts">
+                        <div class="phone">+7 908-827-08-94</div>
+                        <div class="phone">+7 900-021-14-84</div>
+                        <div class="social-icons">
+                            <a href="#" class="telegram">
+                                <img src="assets/img/telegram-svgrepo-com.svg" alt="Telegram">
+                            </a>
+                            <a href="#" class="whatsapp">
+                                <img src="assets/img/whatsapp-svgrepo-com.svg" alt="WhatsApp">
+                            </a>
+                        </div>
+                    </div>
                 </nav>
                 <div class="contacts">
                     <div class="phone">+7 908-827-08-94</div>
                     <div class="phone">+7 900-021-14-84</div>
                     <div class="social-icons">
-                        <a href="#" class="telegram">📱</a>
-                        <a href="#" class="whatsapp">💬</a>
+                        <a href="#" class="telegram">
+                            <img src="assets/img/telegram-svgrepo-com.svg" alt="Telegram">
+                        </a>
+                        <a href="#" class="whatsapp">
+                            <img src="assets/img/whatsapp-svgrepo-com.svg" alt="WhatsApp">
+                        </a>
                     </div>
                 </div>
+                <button class="mobile-menu-toggle" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </header>
 
-    <section class="hero-section">
+    <section class="hero-section" style="background-image: url('assets/img/header-block-img.png');">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
@@ -57,12 +79,57 @@
                     </div>
                     <div class="hero-buttons">
                         <button class="btn btn-primary">заказать проект</button>
-                        <button class="btn btn-secondary">наши проекты →</button>
+                        <button class="btn btn-secondary">наши проекты <img src="assets/img/arrow-up.png" alt="arrow-right"></button>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <img src="assets/img/header-block-img.png" alt="Современный дом">
+
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <div class="container">
+            <div class="video-block">
+                <img src="assets/img/video.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <div class="container">
+            <div class="portfolio-header">
+                <h2 class="portfolio-title">ПОРТФОЛИО<br>НАШИХ РАБОТ</h2>
+                <p class="portfolio-subtitle">Реалистичные 3D-визуализации и тщательно проработанные проекты помогают увидеть дом вашей мечты заранее</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="assets/img/Project1.png" alt="Современный дом проект 1">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="project-name">название</h3>
+                        <p class="project-area">площадь</p>
+                        <p class="project-cost">стоимость</p>
+                    </div>
                 </div>
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="assets/img/Project2.png" alt="Современный дом проект 2">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="project-name">название</h3>
+                        <p class="project-area">площадь</p>
+                        <p class="project-cost">стоимость</p>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="arrow-left nav-btn">
+                    <img src="assets/img/arrow-left.png" alt="arrow-left">
+                </button>
+                <button class="arrow-right nav-btn">
+                    <img src="assets/img/arrow-right.png" alt="arrow-right">
+                </button>
             </div>
         </div>
     </section>
