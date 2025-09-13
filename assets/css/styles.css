@@ -4,7 +4,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+:root {
+    --color-primary: #0087FD;
+    --color-secondary: #F0F8FF;
+    --color-text: #353431;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
 @font-face {
     font-family: 'Inter';
     src: url('../fonts/Inter-Regular.otf') format('opentype');
@@ -43,6 +53,11 @@
     src: url('../fonts/sfuidisplay_heavy.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
+}
+
+.a-row {
+    display: flex;
+    gap: 20px;
 }
 
 body {
@@ -937,5 +952,213 @@ img {
         flex-wrap: wrap;
         height: auto;
         justify-content: center;
+    }
+}
+
+.service-3d {
+    padding: 100px 0;
+}
+.section-header h3 {
+    font-family: 'sfuidisplayBold';
+    font-size: 55px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #353431;
+    margin-bottom: 0;
+    line-height: 1;
+}
+.section-content p {
+    font-family: 'Inter';
+    font-size: 55px;
+    font-weight: 300;
+    color: #353431;
+    line-height: 1.1;
+    margin: 0;
+}
+.service-3d-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-end;
+    gap: 40px;
+    position: relative;
+    padding-bottom: 40px;
+}
+.service-3d-row::after {
+    position: absolute;
+    bottom: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #4950577a;
+}
+.service-3d-desc {
+    position: relative;
+    padding: 40px 0;
+}
+.service-3d-desc::after {
+    position: absolute;
+    bottom: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #4950577a;
+}
+.service-3d-desc p {
+    font-size: 23px;
+    font-weight: normal;
+    max-width: 700px;
+}
+
+.service-3d-text {
+    padding: 60px 0;
+    position: relative;
+}
+
+.service-3d-text {
+    display: flex;
+    align-items: stretch;
+    min-height: 400px;
+}
+
+.service-3d-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 60px 40px;
+    color: white;
+}
+
+.service-3d-right {
+    flex: 2;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+}
+
+.service-3d-number {
+    font-size: 23px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    color: var(--color-text);
+
+}
+
+.service-3d-button {
+    background: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: lowercase;
+    font-family: 'Inter', sans-serif;
+    align-self: flex-start;
+    transition: all 0.3s ease;
+}
+
+.service-3d-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-3d-content {
+    width: 100%;
+}
+
+.service-3d-title {
+    font-size: 23px;
+    font-weight: bold;
+    color: #353431;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    font-family: 'Inter', sans-serif;
+}
+
+.service-3d-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-3d-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 300;
+    color: #353431;
+}
+
+.service-3d-list li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #333;
+    font-weight: bold;
+}
+
+@media(max-width: 1200px) {
+    .section-header h3 {
+        font-size: 45px;
+    }
+    .section-content p {
+        font-size: 45px;
+    }
+}
+@media(max-width: 768px) {
+    .service-3d {
+        padding: 60px 0;
+        padding-top: 0;
+    }
+    .service-3d-row {
+        grid-template-columns: 1fr;
+    }
+        .section-header h3 {
+        font-size: 36px;
+    }
+    .section-content p {
+        font-size: 36px;
+    }
+    
+    .service-3d-text {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .service-3d-left {
+        padding: 40px 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .service-3d-right {
+        padding: 40px 20px;
+    }
+    
+    .service-3d-number {
+        font-size: 23px;
+        font-weight: 600;
+    }
+    
+    .service-3d-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .service-3d-list li {
+        font-size: 14px;
+        margin-bottom: 15px;
     }
 }
