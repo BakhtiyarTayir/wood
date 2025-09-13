@@ -1672,3 +1672,7 @@ img {
         font-size: 18px;
     }
 }
+
+.footer p {
+    color: #fff;
+}
