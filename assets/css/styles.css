@@ -91,7 +91,7 @@ p {
     transition: background-color 0.3s ease;
 }
 .header.bg-color {
-    background-color: rgba(240, 248, 255, 0.082);
+    background-color: rgba(121, 130, 253, 0.979);
     backdrop-filter: blur(10px);
 }
 
@@ -120,6 +120,9 @@ p {
 @media(max-width: 768px) {
     .header {
         background-color: rgba(0, 135, 253, 0.082);
+    }
+    .header-logo {
+        margin-bottom: 0;
     }
 }
 .header-logo span {
